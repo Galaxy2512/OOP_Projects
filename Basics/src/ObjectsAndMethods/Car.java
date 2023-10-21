@@ -30,7 +30,7 @@ public class Car {
 
     @Override
     public String toString() { //to string method to represent string values of object
-        return "Car{" + "brand='" + brand + '\'' + ", model='" + model + '\'' + ", year=" + year + ", type='" + type + '\'' + ", hp=" + hp + '}';
+        return "Car" + "brand='" + brand + '\'' + ", model='" + model + '\'' + ", year=" + year + ", type='" + type + '\'' + ", hp=" + hp  + " hp";  };
     }
 
 //    public static String getBrand() {;
@@ -72,4 +72,4 @@ public class Car {
 //    public static void setHp(int hp) {
 //        Car.hp = hp;
 //    }
-}
+
