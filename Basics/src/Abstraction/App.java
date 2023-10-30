@@ -8,4 +8,9 @@ package Abstraction;
 
 
 public class App {
+    public static void main(String[] args) {
+        Palms palms = new Palms();
+        palms.water();
+
+    }
 }

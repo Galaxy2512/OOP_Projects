@@ -6,14 +6,8 @@ package Abstraction;
 
 public abstract class Plant {
 
+    abstract void water();
 
 
-    Plant() {
-        System.out.println("Plant constructor");
-    }
-
-    public void grow() {
-        System.out.println("Plant is growing");
-    }
 
 }
