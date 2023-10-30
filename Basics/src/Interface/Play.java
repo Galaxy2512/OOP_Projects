@@ -2,11 +2,8 @@ package Interface;
 
 public interface Play{
 
-        void play();
+        public void play();
 
-        void sing();
-
-        void compose();
 
 
 
