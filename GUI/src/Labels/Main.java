@@ -6,6 +6,8 @@ import javax.swing.border.Border;
 import java.awt.*;
 
 //Jlabel = a GUI display area for a string of text, an image, or both
+//difference of frame and label is that frame is the window and label is the text or image inside the window
+
 
 public class Main {
     public static void main(String[] args) {
@@ -25,24 +27,9 @@ public class Main {
         label.setBackground(Color.green); // set background color of label
         label.setOpaque(true); // display background color
         label.setHorizontalAlignment(JLabel.CENTER); // set horizontal position of icon + text within label
-        label.setVerticalAlignment(JLabel.CENTER); // set vertical position of icon + text within label
-
-
-
-
-
-
-
-
-
-        label.setVerticalAlignment(JLabel.CENTER); // set vertical position of icon + text within label
-        label.setHorizontalAlignment(JLabel.CENTER); // set horizontal position of icon + text within label
-        label.setBounds(0, 0, 500, 500); // set x and y positions within frame as well as dimensions
+        label.setVerticalAlignment(JLabel.CENTER); // set vertical position of icon + text within labe
+        label.setBounds(0, 0, 200, 200); // set x and y positions within frame as well as dimensions
         label.setVisible(true);
-
-
-
-
 
 
         JFrame frame = new JFrame(); // create an instance of MyFrame class
@@ -54,6 +41,13 @@ public class Main {
         frame.add(label); // add label to frame
         //how to make gui resizable
         frame.setResizable(true);
+        frame.setVisible(true);
+
+
+
+        frame.pack(); // fit frame to elements (otherwise elements will be squeezed together) (this should be the last line)
+
+        //frame.setVisible(false); // make frame visible (this should be the last line)
 
 
     }
