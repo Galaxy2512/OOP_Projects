@@ -1,31 +1,39 @@
 package Labels;
 
-//JLabel = a GUI display area for a string of text, an image, or both
-//          can be created using the following constructors:
-//          JLabel()
-//          JLabel(String text)
-//          JLabel(Icon image)
-//          JLabel(String text, Icon image, int horizontalAlignment)
-//          JLabel(String text, int horizontalAlignment)
-
 import javax.swing.*;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
 import java.awt.*;
 
 //Jlabel = a GUI display area for a string of text, an image, or both
-//          can be created using the following constructors:
-//          JLabel()
-//          JLabel(String text)
-//          JLabel(Icon image)
+
 public class Main {
     public static void main(String[] args) {
-
-        JLabel label = new JLabel(); // create a JLabel
         ImageIcon image = new ImageIcon("dude.png"); // create an ImageIcon
-        label.setText("Bro, do you even code?"); // set text of label
+        JLabel label = new JLabel(); // create a JLabel
+        Border border = BorderFactory.createLineBorder(Color.black, 5); // create a border for the label
+        label.setBorder(border); // set border for label
+
+
+        label.setText("Dude, do you even code?"); // set text of label
         label.setIcon(image); // set icon of label
-        label.setIconTextGap(10); // set gap of text to image
-        label.setForeground(new Color(0x4A6C95)); // set text color
-        label.setFont(new Font("MV Boli", Font.PLAIN, 100)); // set font of text
+        label.setHorizontalTextPosition(JLabel.CENTER); // set text LEFT, CENTER, RIGHT of imageicon
+        label.setVerticalTextPosition(JLabel.TOP); // set text TOP, CENTER, BOTTOM of imageicon
+        label.setForeground(new Color(0xFF12D021, true)); // set font color of text
+        label.setFont(new Font("Calibri", Font.BOLD, 20)); // set font of text
+        label.setIconTextGap(-25); // set gap of text to image (negative to bring closer) (default is 4)
+        label.setBackground(Color.green); // set background color of label
+        label.setOpaque(true); // display background color
+        label.setHorizontalAlignment(JLabel.CENTER); // set horizontal position of icon + text within label
+        label.setVerticalAlignment(JLabel.CENTER); // set vertical position of icon + text within label
+
+
+
+
+
+
+
+
 
         label.setVerticalAlignment(JLabel.CENTER); // set vertical position of icon + text within label
         label.setHorizontalAlignment(JLabel.CENTER); // set horizontal position of icon + text within label
@@ -42,7 +50,10 @@ public class Main {
         frame.setSize(420, 420); // width, height in pixels
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit out of application
         frame.setResizable(false); // prevent frame from being resized
-        frame.setTitle("JLabel Demo"); // title of the window
+        frame.setTitle("Dude Jlabel is fun"); // title of the window
+        frame.add(label); // add label to frame
+        //how to make gui resizable
+        frame.setResizable(true);
 
 
     }
