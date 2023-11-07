@@ -38,7 +38,12 @@ public class JOption implements ActionListener {
 
         String[] responses = {"No, you are awesome", "Thank you!", "*blush*"};
         ImageIcon icon = new ImageIcon("dude.png");
-        JOptionPane.showOptionDialog(null, "You are awesome!", "Secret message", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, icon, responses, 0);
+        JOptionPane.showOptionDialog(null,
+                "You are awesome!", "Secret message",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                icon, responses,
+                0); // 0 is the default option (first option in the array)
 
     }
 }
