@@ -30,12 +30,15 @@ public class JOption implements ActionListener {
         JOptionPane.showMessageDialog(null, "Hello my friend, how are you today?" );
 
 
-        JOptionPane.showMessageDialog(null, "Hello my friend, how are you today?", "Title", JOptionPane.WARNING_MESSAGE);
-        String name = JOptionPane.showInputDialog(null, "What is your name?", "Title", JOptionPane.QUESTION_MESSAGE);
-        System.out.println("Hello " + name);
-        JOptionPane.showConfirmDialog(null, "Do you like pizza?", "Title", JOptionPane.YES_NO_CANCEL_OPTION);
+//        JOptionPane.showMessageDialog(null, "Hello my friend, how are you today?", "Title", JOptionPane.WARNING_MESSAGE);
+//        String name = JOptionPane.showInputDialog(null, "What is your name?", "Title", JOptionPane.QUESTION_MESSAGE);
+//        System.out.println("Hello " + name);
+//        JOptionPane.showConfirmDialog(null, "Do you like pizza?", "Title", JOptionPane.YES_NO_CANCEL_OPTION);
+//        System.out.println("Hello " + name + " you like pizza?");
 
-
+        String[] responses = {"No, you are awesome", "Thank you!", "*blush*"};
+        ImageIcon icon = new ImageIcon("dude.png");
+        JOptionPane.showOptionDialog(null, "You are awesome!", "Secret message", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, icon, responses, 0);
 
     }
 }
